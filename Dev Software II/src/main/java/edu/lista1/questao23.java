@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class questao22 {
+public class questao23 {
     public static void main(String[] args) {
         String csvFile = "produtos.csv";
         String line;
@@ -43,7 +43,8 @@ public class questao22 {
                 System.out.println("\nEscolha uma opção:");
                 System.out.println("1. Inserir novo produto");
                 System.out.println("2. Atualizar produto existente");
-                System.out.println("3. Sair");
+                System.out.println("3. Excluir produto existente");
+                System.out.println("4. Sair");
 
                 Scanner scanner = new Scanner(System.in);
                 int escolha = scanner.nextInt();
@@ -56,6 +57,9 @@ public class questao22 {
                         atualizarProduto(produtos);
                         break;
                     case 3:
+                        excluirProduto(produtos);
+                        break;
+                    case 4:
                         System.out.println("Encerrando o programa.");
                         continuar = false;
                         break;
@@ -113,6 +117,19 @@ public class questao22 {
         produtoSelecionado.setPreco(novoPreco);
         produtoSelecionado.setQuantidade(novaQuantidade);
         System.out.println("Produto atualizado com sucesso:");
+        System.out.println(produtoSelecionado);
+    }
+
+    private static void excluirProduto(List<Produto> produtos) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o número do produto que deseja excluir:");
+        int escolhaProduto = scanner.nextInt();
+        if (escolhaProduto < 1 || escolhaProduto > produtos.size()) {
+            System.out.println("Escolha inválida.");
+            return;
+        }
+        Produto produtoSelecionado = produtos.remove(escolhaProduto - 1);
+        System.out.println("Produto excluído com sucesso:");
         System.out.println(produtoSelecionado);
     }
 
