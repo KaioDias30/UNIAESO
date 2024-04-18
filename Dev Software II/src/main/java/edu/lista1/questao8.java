@@ -1,16 +1,21 @@
+package edu.lista1;
+
 import java.io.*;
 
-public class questao9 {
+public class questao8 {
     public static void main(String[] args) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("meuarquivo.txt"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("meuarquivo_sem_excluir.txt"));
             String linha;
-            int contagem = 0;
             while ((linha = reader.readLine()) != null) {
-                contagem += linha.split("Java").length - 1;
+                if (!linha.contains("excluir")) {
+                    writer.write(linha);
+                    writer.newLine();
+                }
             }
             reader.close();
-            System.out.println("A palavra 'Java' aparece " + contagem + " vezes.");
+            writer.close();
         } catch (IOException e) {
             System.out.println("Erro: " + e.getMessage());
         }

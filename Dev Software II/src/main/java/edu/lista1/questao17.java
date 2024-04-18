@@ -1,43 +1,11 @@
+package edu.lista1;
+
+import edu.lista1.entidades.Funcionario;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-class Funcionario implements Serializable {
-    private String nome;
-    private int idade;
-    private double salario;
-
-    public Funcionario(String nome, int idade, double salario) {
-        this.nome = nome;
-        this.idade = idade;
-        this.salario = salario;
-    }
-
-
- 
-    public String toString() {
-        return "Funcionário: " + nome + ", Idade: " + idade + ", Salário: " + salario;
-    }
-
-
-    public void setSalario(double nextDouble) {
-    
-        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
-    }
-
-
-    public void setIdade(int nextInt) {
-      
-        throw new UnsupportedOperationException("Unimplemented method 'setIdade'");
-    }
-
-
-    public void setNome(String nextLine) {
-    
-        throw new UnsupportedOperationException("Unimplemented method 'setNome'");
-    }
-}
 
 public class questao17 {
     private static final String ARQUIVO_FUNCIONARIOS = "funcionarios.dat";

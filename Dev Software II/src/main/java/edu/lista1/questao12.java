@@ -1,3 +1,7 @@
+package edu.lista1;
+
+import edu.lista1.entidades.Pessoa;
+
 import java.io.*;
 
 public class questao12 {

@@ -1,3 +1,5 @@
+package edu.lista1;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;

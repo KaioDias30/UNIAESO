@@ -1,3 +1,5 @@
+package edu.lista1;
+
 import java.io.*;
 
 public class questao5 {

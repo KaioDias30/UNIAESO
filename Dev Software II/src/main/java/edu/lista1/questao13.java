@@ -1,24 +1,10 @@
+package edu.lista1;
+
+import edu.lista1.entidades.Produto;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
-class Produto implements Serializable {
-    private String nome;
-    private double preco;
-
-    public Produto(String nome, double preco) {
-        this.nome = nome;
-        this.preco = preco;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-}
 
 public class questao13 {
     public static void main(String[] args) {
