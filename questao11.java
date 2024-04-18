@@ -18,7 +18,7 @@ class Pessoa implements Serializable {
     }
 }
 
-public class SerializePessoa {
+public class questao11 {
     public static void main(String[] args) {
         Pessoa pessoa = new Pessoa("João", 30);
 
