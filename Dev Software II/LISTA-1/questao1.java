@@ -2,32 +2,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class EscreverArquivo {
+public class questao1 {
     public static void main(String[] args) {
-        // Nome do arquivo
+        
         String nomeArquivo = "meuarquivo.txt";
-        
-        // Mensagem a ser escrita no arquivo
         String mensagem = "Olá, mundo!";
-        
-        // Tentar escrever no arquivo
         try {
-            // Cria um FileWriter apontando para o arquivo
             FileWriter fileWriter = new FileWriter(nomeArquivo);
-            
-            // Cria um PrintWriter para escrever no arquivo
             PrintWriter printWriter = new PrintWriter(fileWriter);
-            
-            // Escreve a mensagem no arquivo
             printWriter.println(mensagem);
-            
-            // Fecha o PrintWriter
             printWriter.close();
-            
-            // Informa que a mensagem foi escrita com sucesso
             System.out.println("Mensagem escrita com sucesso em '" + nomeArquivo + "'.");
         } catch (IOException e) {
-            // Se houver algum erro, exibe a mensagem de erro
             System.err.println("Erro ao escrever no arquivo: " + e.getMessage());
         }
     }
