@@ -2,7 +2,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class questao {
+public class questao3 {
     public static void main(String[] args) {
         String nomeArquivo = "meuarquivo.txt";
         String novaLinha = "Isso é uma adição!";
