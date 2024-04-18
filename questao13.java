@@ -22,6 +22,7 @@ class Produto implements Serializable {
 
 public class questao13 {
     public static void main(String[] args) {
+    
         List<Produto> produtos = new ArrayList<>();
         produtos.add(new Produto("Notebook", 2500.0));
         produtos.add(new Produto("Smartphone", 1200.0));
@@ -29,19 +30,14 @@ public class questao13 {
 
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("produtos.dat"))) {
             outputStream.writeObject(produtos);
-            System.out.println("Lista de Produtos serializada com sucesso.");
+            System.out.println("Lista de produtos serializada com sucesso.");
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-}
-
-public class questao13 {
-    public static void main(String[] args) {
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("produtos.dat"))) {
-            List<Produto> produtos = (List<Produto>) inputStream.readObject();
-            System.out.println("Lista de Produtos:");
-            for (Produto produto : produtos) {
+            List<Produto> produtosDeserializados = (List<Produto>) inputStream.readObject();
+            System.out.println("Lista de produtos deserializada:");
+            for (Produto produto : produtosDeserializados) {
                 System.out.println("Nome: " + produto.getNome() + ", Preço: " + produto.getPreco());
             }
         } catch (IOException | ClassNotFoundException e) {
