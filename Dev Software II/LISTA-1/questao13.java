@@ -35,6 +35,7 @@ public class questao13 {
             e.printStackTrace();
         }
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("produtos.dat"))) {
+            @SuppressWarnings("unchecked")
             List<Produto> produtosDeserializados = (List<Produto>) inputStream.readObject();
             System.out.println("Lista de produtos deserializada:");
             for (Produto produto : produtosDeserializados) {
